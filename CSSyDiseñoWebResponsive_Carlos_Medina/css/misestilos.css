@@ -1,0 +1,269 @@
+body {
+  background-color: #02010a;
+  font-family: 'Dancing Script', cursive;
+}
+
+.contenido {
+  margin: auto;
+  width: 900px;
+  animation: slidein 3s;
+}
+
+/* Seccion de la cabecera de la pagina index - paisajes - retratos */
+#cabecera {
+  background-color: #5b7989;
+  height: 160px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+
+h1 {
+  color: white;
+  font-size: 35px;
+  text-shadow: 2px 2px 2px #02010a;
+  padding-top: 10px;
+  padding-left: 20px;
+  float: left;
+}
+
+/* Seccion de la navegación */
+.active {
+  text-decoration: none;
+}
+
+.navegacion {
+  padding-right: 5px;
+  padding-top: 25px;
+  font-size: 25px;
+}
+
+.navegacion ul {
+  list-style: none;
+  padding-right: 10px;
+}
+
+.navegacion ul li {
+  float: right;
+  width: auto;
+}
+
+.navegacion ul li a {
+  padding-right: 20px;
+  color: white;
+}
+
+.navegacion ul li a:hover {
+  font-size: 28px;
+  text-decoration: none;
+}
+
+
+
+/* Seccion central de la pagina index */
+#centro {
+  background-color: #82c3a6;
+  padding-top: 1px;
+  padding-bottom: 1px;
+
+
+}
+
+.imgcentro {
+  width: 100%;
+  height: 50%;
+  display: block;
+  margin: auto;
+  box-shadow: 2px 2px 2px #02010a;
+}
+
+/* Seccion secundaria de la pagina index */
+#secundaria {
+  background-color: #d5c75f;
+  min-height: 300px;
+  display: flex;
+  flex-direction: row;
+}
+
+.imgsecundaria {
+  width: 100%;
+  height: 80%;
+  margin: auto;
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px #02010a;
+}
+
+/* Seccion de efectos imagenes secundarias de la pagina index */
+.imgsecundaria:hover {
+  transition: 0.5s;
+  transform: rotate(10deg);
+  box-shadow: 2px 2px 2px #82c3a6;
+}
+
+#imgretrato:hover {
+  transform: translate(5px, -20px);
+  transition: 0.5s;
+}
+
+#secundaria p  {
+  font-size: 23px;
+  text-align: center;
+  color: black;
+}
+
+.enlace {
+  color: black;
+}
+
+.enlace:hover {
+  font-size: 22px;
+  color: rgb(124, 129, 130);
+}
+
+/* Seccion de pie de pagina de la pagina index - paisajes - retratos */
+#pie_pagina {
+  background-color: #C6d5c5;
+  min-height: 300px;
+  display: flex;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#pie {
+  display: flex;
+  flex-direction: row;
+}
+
+.columna {
+  margin-left: 30px;
+  padding: 10px;
+}
+
+#fbk, #gorjeo, #instag {
+  width: 20px;
+  height: 20px;
+  padding-right: 5px;
+}
+
+#email {
+  color: black;
+}
+
+#email:hover {
+  color: rgb(124, 129, 130);
+}
+
+
+/* Seccion central de la pagina paisajes */
+#galeria {
+    background-color: #d5c75f;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+.imgsecundaria2 {
+    width: 218px;
+    height: 170px;
+    margin: auto;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px #02010a;
+}
+
+#desenfoque {
+  -webkit-filter: blur(10px);
+  filter: blur(10);
+}
+
+#sepi {
+  -webkit-filter: sepia(90%);
+  filter: sepia(90%);
+}
+
+#monocro2, #monocro4, #monocro6 {
+  -webkit-filter: grayscale(100%);
+  filter:grayscale(100%);
+}
+
+
+
+/* Seccion central de la pagina retratos */
+#retrato {
+    background-color: #d5c75f;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+
+/* Seccion efecto de entrada */
+@-webkit-keyframes slidein {
+  0% {
+    margin-top: 150%;
+  }
+  60% {
+    margin-top: -5%;
+  }
+  100% {
+    margin-top: 0%;
+  }
+}
+
+
+/* Seccion adaptable a movil con un ancho maximo de 900px */
+@media only screen and (max-width: 900px) {
+  .contenido {
+    width: 100%;
+    margin: 0;
+  }
+
+  #cabecera header h1 {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .navegacion {
+    margin-right: 35px;
+  }
+
+
+  #secundaria {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-bottom: 0;
+  }
+
+  #pie_pagina {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+  }
+  #pie {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+  }
+
+  #galeria {
+    width: 100%;
+
+
+  }
+
+  .ingaleria {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .imgsecundaria2 {
+    width: 100%;
+    height: 100%;
+  }
+
+}
